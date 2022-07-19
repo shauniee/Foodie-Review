@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Foodie Delivery</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="./css/Delivery.css" />
+        <script src="Delivery.js" async></script>
+         <!-- To get the icons used in dropdown -->
+         <script src="https://kit.fontawesome.com/de8abd4bdf.js" crossorigin="anonymous"></script>
+         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    </head>
+    <body>
+        <script src='firebase.js'></script>
+        <script src='Mainpage.js'></script>
+        <div class="topnav" id="myTopnav">
+            <a class="navbar-brand"><img src="./Images/app_logo2.jpg" width="140px" height="70px"></a>
+            <div class="headers">
+            <div class="dropdown">
+                <button class="dropbtn">Home 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./Mainpage.html">Restaurant</a>
+                  <a href="./Delivery.html">Delivery</a>
+                  <a href="http://www.tp.edu.sg" target="_blank">Temasek Polytechnic</a>
+                </div>
+              </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Profile 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./My-Profile.html">My Profile</a>
+                  <a href="./Membership.html">Shop</a>
+                </div>
+              </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Contact Us 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./Contact-Us.html">Need Help?</a>
+                  <a href="https://forms.gle/PDH3bp6HmKHednDC8" target="_blank">Feedback</a>
+                  <a href="./Partners.html">Our Team & Partners</a>
+                </div>
+              </div> 
+            <a href="./About-Us.html">About Us</a>
+            <div class="dropdown">
+            <button onclick=logOut() class="dropbtn">Log Out
+              </button>
+            </div> 
+          </div>
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+            <script>function logOut(){firebase.auth().signOut();} mainApp.logOut = logOut;</script>
+          <img src="./Images/delivery_logo.jpg">
+        <section class="container content-section">
+            <h2 class="section-header">Dessert</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Acai</span>
+                    <img class="shop-item-image" src="./Images/Acai.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$8.70</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Berry Cake</span>
+                    <img class="shop-item-image" src="./Images/Cake.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$19.99</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Japanese</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Chirashi Donburi</span>
+                    <img class="shop-item-image" src="./Images/Chirashidon.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$18.90</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Salmon Donburi</span>
+                    <img class="shop-item-image" src="./Images/Salmondon.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$16.90</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Western</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Salmon filet</span>
+                    <img class="shop-item-image" src="./Images/Grilled Salmon.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$18.90</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Egg benedict</span>
+                    <img class="shop-item-image" src="./Images/john-baker-Wu4ZBeitiyM-unsplash.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$12.50</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Beef Stack</span>
+                    <img class="shop-item-image" src="./Images/Burger.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$10.70</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+        <footer>Copyright &copy; Shaun Temasek Polytechnic</footer>
+    </body>
+</html>

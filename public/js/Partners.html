@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Foodie Review Partners</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/Partners.css">
+<!-- To get the icons used in dropdown -->
+<script src="https://kit.fontawesome.com/de8abd4bdf.js" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+<body>
+  <script src='firebase.js'></script>
+  <script src='Mainpage.js'></script>
+
+  <div class="topnav" id="myTopnav">
+    <a class="navbar-brand"><img src="./Images/app_logo2.jpg" width="140px" height="70px"></a>
+    <div class="headers">
+    <div class="dropdown">
+        <button class="dropbtn">Home 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./Mainpage.html">Restaurant</a>
+          <a href="./Delivery.html">Delivery</a>
+          <a href="http://www.tp.edu.sg" target="_blank">Temasek Polytechnic</a>
+        </div>
+      </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Profile 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./My-Profile.html">My Profile</a>
+          <a href="./Membership.html">Shop</a>
+        </div>
+      </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Contact Us 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./Contact-Us.html">Need Help?</a>
+          <a href="https://forms.gle/PDH3bp6HmKHednDC8" target="_blank">Feedback</a>
+          <a href="./Partners.html">Our Team & Partners</a>
+        </div>
+      </div> 
+    <a href="./About-Us.html">About Us</a>
+    <div class="dropdown">
+    <button onclick=logOut() class="dropbtn">Log Out
+      </button>
+    </div> 
+  </div>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    <script>function logOut(){firebase.auth().signOut();} mainApp.logOut = logOut;</script>
+
+<!-- Page Start -->
+<div id="home" class="w3-content" style="max-width:1564px">
+
+<!-- About our team -->
+  <div id="about" class="w3-container w3-padding-32">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Our Team</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    </div>
+    
+    <div class="w3-row-padding">
+    
+    <div class="w3-col l3 m6 w3-margin-bottom card">
+    <img src="./Images/Shaun.jpg" style="width:100%">
+    <h3>Shaun</h3>
+    <p class="w3-opacity">Main Designer & Creater</p>
+    <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom card">
+      <img src="./Images/CJ.jpeg" style="width:100%">
+      <h3>CJ</h3>
+      <p class="w3-opacity">Modal</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+      </div>
+    
+    <div class="w3-col l3 m6 w3-margin-bottom card">
+    <img src="./Images/Ben.jpg" style="width:100%">
+    <h3>Ben</h3>
+    <p class="w3-opacity">Web Designer</p>
+    <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    
+    </div>
+    <div class="w3-row-padding">
+    
+          <div class="w3-col l3 m6 w3-margin-bottom card">
+            <img src="./Images/Hazzie.jpeg" style="width:100%; height: 295.82px;">
+            <h3>Hazwan</h3>
+            <p class="w3-opacity">Web Designer</p>
+            <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+            </div>
+      
+        <div class="w3-col l3 m6 w3-margin-bottom card">
+          <img src="./Images/Junning.jpg" style="width:100%; height: 295.82px;">
+          <h3>Junning</h3>
+          <p class="w3-opacity">Mental Patient</p>
+          <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+          </div>
+
+          <div class="w3-col l3 m6 w3-margin-bottom card">
+            <img src="./Images/jess.jpeg" style="width:100%; height: 295.82px;">
+            <h3>Jessica</h3>
+            <p class="w3-opacity">Modal</p>
+            <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+            </div>
+    </div>
+
+  <!-- About our partners -->
+  <div id="about" class="w3-container w3-padding-32">
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Our Partners</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+  occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+  laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  </div>
+  
+  <div class="w3-row-padding">
+  
+  <div class="w3-col l3 m6 w3-margin-bottom card">
+  <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQEmT3lq2KZDXw/company-logo_200_200/0/1519856511239?e=2159024400&v=beta&t=DhYVWjK4s19XTxZcm5kYY2oWm3v2vk3vAX88z2DtEp4" style="width:100%">
+  <h3>Singtel</h3>
+  <p class="w3-opacity">Main Partner</p>
+  <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+  </div>
+  
+  <div class="w3-col l3 m6 w3-margin-bottom card">
+  <img src="https://foodrepublic.com.sg/wp-content/uploads/2018/05/200x200px_Sqlogo.jpg" style="width:100%">
+  <h3>Food Republic</h3>
+  <p class="w3-opacity">Main Partner</p>
+  <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+  </div>
+  </div>
+</div>
+  
+
+</body>
+<hr>
+<footer>Copyright &copy; Shaun Temasek Polytechnic</footer>
+</html> 
